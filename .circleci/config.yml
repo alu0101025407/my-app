@@ -1,7 +1,9 @@
 steps:
   - run:
+    name: Test
+    command: mvn test
   #...
   # run tests and store XML files to a subdirectory, for example, test-results
   #...
   - store_test_results:
-    path: test-results
+    path: target/surefire-reports
